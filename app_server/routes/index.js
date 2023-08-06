@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-var ctrlmain = require('C:/Users/Vinnusss/OneDrive/Desktop/loc8r/app_server/controller/main');
+var ctrllocations = require('../controller/locations');
+var ctrlothers = require('../controller/others');
 
-/* GET home page. */
-router.get('/',ctrlmain.index);
+router.get('/signin',ctrlothers.signin);
+/* GET Locations page. */
+router.get('/',ctrllocations.homeList);
+router.get('/locations',ctrllocations.locationInfo);
+router.get('/locations/review/new',ctrllocations.addReview);
+/* get others page */
+router.get('/about',ctrlothers.about);
+router.get('/register',ctrlothers.register);
 module.exports=router;
-module.exports = router;
