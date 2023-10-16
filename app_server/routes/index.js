@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var ctrllocations = require('../controller/locations');
-var ctrlothers = require('../controller/others');
+var ctrllocations = require('../controller/locations.js');
+var ctrlothers = require('../controller/others.js');
 
 router.get('/signin',ctrlothers.signin);
 /* GET Locations page. */
